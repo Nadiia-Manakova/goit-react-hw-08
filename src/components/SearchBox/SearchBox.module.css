@@ -1,0 +1,28 @@
+.formField {
+  width: 100%;
+  background-color: #e8eaec;
+  border: none;
+  box-shadow: -5px -5px 15px 0px rgba(255, 255, 255, 0.64) inset,
+    5px 5px 5px 0px rgba(13, 39, 80, 0.15) inset;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: grey;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.formField:focus {
+  outline: lightgrey solid 1px;
+}
+.formLabel {
+  color: grey;
+  font-size: 14px;
+}
+
+.formContainer {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 50px;
+}

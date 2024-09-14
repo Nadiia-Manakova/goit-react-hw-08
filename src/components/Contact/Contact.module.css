@@ -1,0 +1,16 @@
+.btn {
+  background-color: #e8eaec;
+  border: none;
+  box-shadow: 2px 2px 7px 0px rgba(13, 39, 80, 0.16), -2px -2px 7px 0px #fff;
+  border-radius: 10%;
+  padding: 5px 10px;
+  color: grey;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: linear-gradient(167deg, rgb(201, 87, 106) 34.27%, #dd6480 56.59%);
+  color: white;
+  box-shadow: -5px -5px 15px 0px rgba(167, 46, 66, 0.64) inset,
+    5px 5px 5px 0px rgba(167, 46, 66, 0.64) inset;
+}

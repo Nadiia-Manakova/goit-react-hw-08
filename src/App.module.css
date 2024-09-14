@@ -1,0 +1,71 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+p {
+  color: grey;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+h1 {
+  background: linear-gradient(167deg, #5463cb 34.27%, #4d40ac 56.59%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+
+h2 {
+  background: linear-gradient(167deg, #5463cb 34.27%, #4d40ac 56.59%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+h3 {
+  background: grey;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: left;
+  margin-top: 50px;
+}
+
+.section {
+  width: 300px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
