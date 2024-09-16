@@ -27,6 +27,7 @@ h1 {
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   font-size: 32px;
+  text-align: center;
 }
 
 h2 {
@@ -36,37 +37,40 @@ h2 {
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   font-size: 24px;
-  text-align: center;
 }
 
 h3 {
-  background: grey;
+  color: grey;
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
   font-size: 16px;
 }
 
-li {
-  display: flex;
-  justify-content: space-between;
-}
-
-ul {
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: left;
-  margin-top: 50px;
-}
-
 .section {
-  width: 300px;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(58, 58, 58);
+}
+
+main {
+  margin-top: 40px;
+  max-width: 1280px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
+}
+
+header {
+  box-shadow: 5px 5px 15px 0px rgba(13, 39, 80, 0.16), -5px -5px 15px 0px #fff;
+  padding: 10px 0px;
 }

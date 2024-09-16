@@ -20,9 +20,9 @@
 }
 
 .formContainer {
-  width: 300px;
+  max-width: 400px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-top: 50px;
+  margin: 50px auto 50px auto;
 }

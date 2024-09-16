@@ -3,7 +3,7 @@
   display: inline-block;
   background-color: #e8eaec;
   border: none;
-  box-shadow: 5px 5px 15px 0px rgba(13, 39, 80, 0.16), -5px -5px 15px 0px #fff;
+  box-shadow: 5px 5px 10px 0px rgba(13, 39, 80, 0.16), -5px -5px 10px 0px #fff;
   border-radius: 10px;
   padding: 10px 20px;
   color: grey;
@@ -37,10 +37,12 @@
 }
 
 .formContainer {
-  width: 300px;
+  max-width: 400px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin: 0 auto;
+  padding-top: 40px;
   gap: 30px;
 }
 

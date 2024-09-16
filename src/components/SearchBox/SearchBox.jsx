@@ -17,7 +17,7 @@ export const SearchBox = () => {
   return (
     <div className={css.formContainer}>
       <label htmlFor={searchFieldId} className={css.formLabel}>
-        Find contact by Name
+        Find contact
       </label>
       <input
         type="input"

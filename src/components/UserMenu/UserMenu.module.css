@@ -1,9 +1,34 @@
 .wrapper {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
 }
 
 .username {
-  font-weight: 700;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 410px) {
+  .username {
+    display: none;
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: #e8eaec;
+  border: none;
+  box-shadow: 2px 2px 5px 0px rgba(13, 39, 80, 0.16), -2px -2px 5px 0px #fff;
+  border-radius: 5px;
+  padding: 5px 15px;
+  color: grey;
+  text-align: center;
+
+  font-size: 16px;
+}
+
+.btn:hover {
+  box-shadow: -5px -5px 15px 0px rgba(255, 255, 255, 0.64) inset,
+    5px 5px 5px 0px rgba(13, 39, 80, 0.15) inset;
 }
