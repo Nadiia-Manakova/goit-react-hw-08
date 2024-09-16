@@ -8,8 +8,8 @@ const authSlice = createSlice({
       name: null,
       email: null,
     },
-    token: localStorage.getItem("authToken"),
-    isLoggedIn: !!localStorage.getItem("authToken"),
+    token: null,
+    isLoggedIn: false,
     isRefreshing: false,
   },
   extraReducers: (builder) => {

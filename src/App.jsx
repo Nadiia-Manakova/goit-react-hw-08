@@ -1,7 +1,7 @@
 import { useEffect, lazy } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
-import { setAuthHeader } from "./redux/auth/operations";
+
 import { Layout } from "./components/Layout";
 import { PrivateRoute } from "./components/PrivateRoute";
 import { RestrictedRoute } from "./components/RestrictedRoute";
@@ -19,19 +19,8 @@ export const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
 
-  const loadToken = () => {
-    const token = localStorage.getItem("authToken");
-    if (token) {
-      setAuthHeader(token);
-    }
-    return token;
-  };
-
   useEffect(() => {
-    const token = loadToken();
-    if (token) {
-      dispatch(refreshUser());
-    }
+    dispatch(refreshUser());
   }, [dispatch]);
 
   return isRefreshing ? (

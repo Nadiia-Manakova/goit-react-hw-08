@@ -2,7 +2,7 @@
   width: 60px;
   display: inline-block;
   background-color: #e8eaec;
-
+  color: grey;
   border: none;
   box-shadow: -5px -5px 15px 0px rgba(255, 255, 255, 0.64) inset,
     5px 5px 5px 0px rgba(13, 39, 80, 0.15) inset;
