@@ -20,7 +20,7 @@ export default function TasksPage() {
       <DocumentTitle>Your contacts</DocumentTitle>
       <ContactForm />
       <SearchBox />
-      <div>{isLoading && "Request in progress..."}</div>
+      {/* <div>{isLoading && "Request in progress..."}</div> */}
       <ContactList />
     </>
   );

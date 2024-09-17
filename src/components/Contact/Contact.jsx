@@ -3,8 +3,9 @@ import { AiTwotoneDelete } from "react-icons/ai";
 import { FiEdit2 } from "react-icons/fi";
 import { CgClose } from "react-icons/cg";
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 import { deleteContact, updateContact } from "../../redux/contacts/operations";
-
+import { DeleteContactModal } from "../DeleteContactModal/DeleteContactModal";
 import css from "./Contact.module.css";
 
 export default function Contact({ data }) {
@@ -14,8 +15,17 @@ export default function Contact({ data }) {
   const [newName, setNewName] = useState(name);
   const [newNumber, setNewNumber] = useState(number);
 
-  const handleDelete = (id) => {
-    dispatch(deleteContact(id));
+  const handleDelete = () => {
+    dispatch(deleteContact(id))
+      .unwrap()
+      .then(() => {
+        toast.success("Contact deleted successfully!", {
+          duration: 4000,
+          position: "top-center",
+        });
+        setIsDeleting(false);
+      })
+      .catch(() => {});
   };
 
   const handleEdit = () => {
@@ -29,7 +39,10 @@ export default function Contact({ data }) {
         setIsEditing(false);
       })
       .catch(() => {
-        console.log("Ошибка при сохранении контакта");
+        toast.error("Saving failed!", {
+          duration: 4000,
+          position: "top-center",
+        });
       });
   };
 
@@ -37,6 +50,14 @@ export default function Contact({ data }) {
     setIsEditing(false);
     setNewName(name);
     setNewNumber(number);
+  };
+
+  const openDeleteModal = () => {
+    setIsDeleting(true);
+  };
+
+  const closeDeleteModal = () => {
+    setIsDeleting(false);
   };
 
   return (

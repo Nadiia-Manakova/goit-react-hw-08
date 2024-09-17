@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { logIn } from "../../redux/auth/operations";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { toast } from "react-hot-toast";
 import * as Yup from "yup";
 import css from "./LoginForm.module.css";
 
@@ -17,7 +18,7 @@ export const LoginForm = () => {
       .email("Invalid email address")
       .required("Email is required"),
     password: Yup.string()
-      .min(6, "Password must be at least 6 characters")
+      .min(6, "Password must be at least 8 characters")
       .required("Password is required"),
   });
 
@@ -25,11 +26,11 @@ export const LoginForm = () => {
     dispatch(logIn(values))
       .unwrap()
       .then(() => {
-        console.log("login success");
+        // toast.success("Login successful!");
         resetForm();
       })
       .catch(() => {
-        console.log("login error");
+        // toast.error("Invalid login or password.");
       })
       .finally(() => {
         setSubmitting(false);

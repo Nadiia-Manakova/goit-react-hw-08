@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { toast } from "react-hot-toast";
 import * as Yup from "yup";
 import css from "./RegistrationForm.module.css";
 
@@ -13,7 +14,6 @@ export const RegistrationForm = () => {
     password: "",
   };
 
-  // Валидация полей формы с помощью Yup
   const validationSchema = Yup.object({
     name: Yup.string()
       .min(2, "Username must be at least 2 characters")
@@ -22,23 +22,21 @@ export const RegistrationForm = () => {
       .email("Invalid email address")
       .required("Email is required"),
     password: Yup.string()
-      .min(6, "Password must be at least 6 characters")
+      .min(6, "Password must be at least 8 characters")
       .required("Password is required"),
   });
 
   const handleSubmit = (values, { resetForm, setSubmitting }) => {
-    dispatch(register(values))
-      .unwrap()
-      .then(() => {
-        console.log("Registration successful");
-        resetForm(); // Сброс формы после успешной регистрации
-      })
-      .catch(() => {
-        console.log("Registration error");
-      })
-      .finally(() => {
-        setSubmitting(false); // Сброс флага отправки формы
-      });
+    dispatch(register(values));
+    // .unwrap()
+    // .then(() => {
+    //   // toast.success("The new user was created successfully!");
+    //   resetForm();
+    // })
+    // .catch(() => {})
+    // .finally(() => {
+    //   setSubmitting(false);
+    // });
   };
 
   return (
