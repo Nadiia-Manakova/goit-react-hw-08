@@ -1,5 +1,7 @@
 .header {
   max-width: 100%;
+  box-shadow: 5px 5px 15px 0px rgba(13, 39, 80, 0.16), -5px -5px 15px 0px #fff;
+  padding: 10px 0px;
 }
 .wrap {
   display: flex;
@@ -8,4 +10,13 @@
   margin: 0 auto;
   padding: 0 16px;
   max-width: 960px;
+}
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(58, 58, 58);
 }
