@@ -24,7 +24,7 @@ export default function HomePage() {
         <h1 style={styles.title}>Phonebook</h1>
 
         <h2> welcome page </h2>
-        <img src="../../src/images/11668313_20945188.svg" alt="HomePage" />
+        <img src="/images/11668313_20945188.svg" alt="HomePage" />
       </div>
     </>
   );
