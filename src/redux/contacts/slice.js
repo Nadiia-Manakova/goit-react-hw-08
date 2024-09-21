@@ -65,9 +65,9 @@ const contactsSlice = createSlice({
       .addCase(updateContact.rejected, handleRejected)
 
       .addCase(logOut.fulfilled, (state) => {
-        state.user = { name: null, email: null };
-        state.token = null;
-        state.isLoggedIn = false;
+        state.items = [];
+        state.isLoading = false;
+        state.error = null;
       });
   },
 });
