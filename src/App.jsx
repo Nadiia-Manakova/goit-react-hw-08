@@ -11,7 +11,7 @@ import { selectIsRefreshing } from "./redux/auth/selectors";
 import css from "./App.module.css";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
-const RegisterPage = lazy(() => import("./pages/RegisterPage"));
+const RegistrationPage = lazy(() => import("./pages/RegistrationPage"));
 const LoginPage = lazy(() => import("./pages/LoginPage"));
 const ContactsPage = lazy(() => import("./pages/ContactsPage"));
 
@@ -36,7 +36,7 @@ export const App = () => {
             element={
               <RestrictedRoute
                 redirectTo="/contacts"
-                component={<RegisterPage />}
+                component={<RegistrationPage />}
               />
             }
           />
